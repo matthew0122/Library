@@ -18,8 +18,26 @@
                 <th>InProgress?</th>
                 <th>WantToRead?</th>
                 <th>Page</th>
+                <th>Total Pages</th>
             </tr>
         </table>
+        <form id="addBook">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author">
+            <label for="finished">Finished:</label>
+            <input type="checkbox" id="finished" name="finished">
+            <label for="inProgress">In Progress:</label>
+            <input type="checkbox" id="inProgress" name="inProgress">
+            <label for="wantTo">Want to read:</label>
+            <input type="checkbox" id="wantTo" name="wantTo">
+            <label for="page">Page:</label>
+            <input type="number" id="page" name="page" min="0">
+            <label for="totalPages">Total Pages:</label>
+            <input type="number" id="totalPages" name="totalPages" min="1">
+        </form>
+        <button onclick="showForm()">New Book</button>
     </div>
 </body>
 </html>
