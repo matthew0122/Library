@@ -1,0 +1,4 @@
+#display, tr, th{
+    border: 1px solid black;
+    padding: 15px;
+}
