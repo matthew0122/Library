@@ -6,3 +6,12 @@
     visibility: hidden;
     position:absolute;
 }
+.book {
+    width: max(90%, 100px);
+    height: max(90%, 100px);
+    background-color: green;
+}
+.books {
+    display: grid;
+    grid-template-columns:repeat(auto-fill, min(275px, 32.5vw));
+}

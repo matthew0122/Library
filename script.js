@@ -19,54 +19,26 @@ function addBookToLibrary(author, title, finished, inProgress, wantToRead, page,
 }
 function displayBooks(myLibrary){
     display.innerHTML="";
-    const row1 = document.createElement('tr');
-    const author1 = document.createElement('th');
-    author1.textContent = "Author";
-    const title1 = document.createElement('th');
-    title1.textContent = "Title";
-    const finished1 = document.createElement('th');
-    finished1.textContent = "Finished?";
-    const inProgress1 = document.createElement('th');
-    inProgress1.textContent = "In Progress?";
-    const wantToRead1 = document.createElement('th');
-    wantToRead1.textContent = "Want To Read?";
-    const page1 = document.createElement('th');
-    page1.textContent = "Page";
-    const totalpage1 = document.createElement('th');
-    totalpage1.textContent = "Total Pages";
-    row1.appendChild(author1);
-    row1.appendChild(title1);
-    row1.appendChild(finished1);
-    row1.appendChild(inProgress1);
-    row1.appendChild(wantToRead1);
-    row1.appendChild(page1);
-    row1.appendChild(totalpage1);
-    display.appendChild(row1);
     for(let book of myLibrary){
         if(book.author == ""){
             myLibrary.pop(book);
         }
         else{
-            const row = document.createElement('tr');
-            const author = document.createElement('td');
+            const row = document.createElement('div');
+            row.classList.add("book");
+            const author = document.createElement('h1');
             author.textContent = book.author;
-            const title = document.createElement('td');
+            const title = document.createElement('h1');
             title.textContent = book.title;
-            const finished = document.createElement('td');
+            const finished = document.createElement('button');
             finished.textContent = book.finished;
-            const inProgress = document.createElement('td');
-            inProgress.textContent = book.inProgress;
-            const wantToRead = document.createElement('td');
-            wantToRead.textContent = book.wantToRead;
-            const page = document.createElement('td');
+            const page = document.createElement('h4');
             page.textContent = book.page;
-            const totalPage = document.createElement('td');
+            const totalPage = document.createElement('h4');
             totalPage.textContent = book.totalPages;
             row.appendChild(author);
             row.appendChild(title);
             row.appendChild(finished);
-            row.appendChild(inProgress);
-            row.appendChild(wantToRead);
             row.appendChild(page);
             row.appendChild(totalPage);
             display.appendChild(row);

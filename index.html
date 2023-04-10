@@ -10,17 +10,32 @@
 </head>
 <body>
     <div id="library">
-        <table id="display">
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Read?</th>
-                <th>InProgress?</th>
-                <th>WantToRead?</th>
-                <th>Page</th>
-                <th>Total Pages</th>
-            </tr>
-        </table>
+        <div class="books" id="display">
+            <div class="book">
+                <h1>Author</h1>
+                <h1>Title</h1>
+                <button>Read</button>
+                <h4>pages</h4>
+            </div>
+            <div class="book">
+                <h1>Author</h1>
+                <h1>Title</h1>
+                <button>Read</button>
+                <h4>pages</h4>
+            </div>
+            <div class="book">
+                <h1>Author</h1>
+                <h1>Title</h1>
+                <button>Read</button>
+                <h4>pages</h4>
+            </div>
+            <div class="book">
+                <h1>Author</h1>
+                <h1>Title</h1>
+                <button>Read</button>
+                <h4>pages</h4>
+            </div>
+        </div>
         <div id="formHolder">
             <form id="addBook">
                 <label for="title">Title:</label>
@@ -42,6 +57,6 @@
             </form>
         </div>
         <button onclick="showForm()">New Book</button>
-    </div>
+        
 </body>
 </html>
