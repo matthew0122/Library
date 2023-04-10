@@ -48,5 +48,24 @@ function displayBooks(myLibrary){
 function showForm(){
     const form = document.getElementById("addBook");
     form.style.display="initial";
+    const addBook = document.getElementById("addBook");
+    addBook.addEventListener("submit", function(event){
+        event.preventDefault();
+        const title =event.target[0].value;
+        const author =event.target[1].value;
+        const finished =document.getElementById('finished').checked;
+        const progress =document.getElementById('inProgress').checked;
+        const want =document.getElementById('wantTo').checked;
+        const page =event.target[5].value;
+        const totalPage =event.target[6].value;
+        addBookToLibrary(title, author, finished,
+            progress, want, page, totalPage);
+        displayBooks(myLibrary);
+    }); 
 }
+function hideForm(){
+    const form = document.getElementById("addBook");
+    form.style.display="none";
+}
+
 displayBooks(myLibrary);
