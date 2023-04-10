@@ -3,5 +3,6 @@
     padding: 15px;
 }
 #addBook {
-    display:none;
+    visibility: hidden;
+    position:absolute;
 }
