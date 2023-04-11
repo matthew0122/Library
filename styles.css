@@ -27,20 +27,22 @@ body {
     color: #eeeeee;
     text-align: center;
 }
-.bookRead {
-    
-}
-.remover {
+.book > button {
     width: 70%;
     height: 40px;
     border-radius: 15px;
-    background-image: linear-gradient(45deg, red, orange);
     border: none;
 }
-.remover:hover {
+.book > button:hover{
     width: 75%;
     height: 45px;
     transition: height 0.5s;
+}
+.bookRead {
+    background-image: linear-gradient(45deg, rgb(0, 149, 255), #3eeafd);
+}
+.remover {
+    background-image: linear-gradient(45deg, red, orange);
 }
 .books {
     margin-top: 100px;
