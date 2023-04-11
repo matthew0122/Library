@@ -1,7 +1,7 @@
 let myLibrary = [];
 const display = document.getElementById("display");
 const a = Book("hi", "hi", false, false, false, 0, 512);
-//console.log(a);
+
 myLibrary.push(a);
 function Book(author, title, finished, inProgress, wantToRead, page, totalPages) {
     return {
@@ -27,17 +27,17 @@ function displayBooks(myLibrary){
             const row = document.createElement('div');
             row.classList.add("book");
             const author = document.createElement('h1');
-            author.textContent = book.author;
+            author.textContent = "By: " + book.author;
             const title = document.createElement('h1');
-            title.textContent = book.title;
+            title.textContent =  book.title;
             const finished = document.createElement('button');
             finished.textContent = book.finished;
             const page = document.createElement('h4');
-            page.textContent = book.page;
+            page.textContent = "Current Page: " + book.page;
             const totalPage = document.createElement('h4');
-            totalPage.textContent = book.totalPages;
-            row.appendChild(author);
+            totalPage.textContent = "Total Pages: " + book.totalPages;
             row.appendChild(title);
+            row.appendChild(author);
             row.appendChild(finished);
             row.appendChild(page);
             row.appendChild(totalPage);
@@ -60,7 +60,7 @@ function showForm(){
         const want =document.getElementById('wantTo').checked;
         const page =event.target[5].value;
         const totalPage =event.target[6].value;
-        addBookToLibrary(title, author, finished,
+        addBookToLibrary(author, title, finished,
             progress, want, page, totalPage);
         hideForm();
         displayBooks(myLibrary);
