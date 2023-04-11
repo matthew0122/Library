@@ -36,15 +36,34 @@ function displayBooks(myLibrary){
             page.textContent = "Current Page: " + book.page;
             const totalPage = document.createElement('h4');
             totalPage.textContent = "Total Pages: " + book.totalPages;
+            const removeButton = document.createElement('button');
+            removeButton.textContent="Remove";
+            removeButton.author = author;
+            removeButton.title=title.textContent;
+            removeButton.addEventListener("click", removeBook);
             row.appendChild(title);
             row.appendChild(author);
             row.appendChild(finished);
             row.appendChild(page);
             row.appendChild(totalPage);
+            row.appendChild(removeButton);
             display.appendChild(row);
         }
     }
     console.log(myLibrary);
+}
+function removeBook(event){
+    for(let book of myLibrary){
+        if("By: " + book.author == event.currentTarget.author.innerText){
+            console.log(book.title);
+            console.log(event.currentTarget.title);
+            if(book.title = event.currentTarget.title){
+                myLibrary.pop(book);
+                break;
+            }
+        }
+    }
+    displayBooks(myLibrary);
 }
 function showForm(){
     const form = document.getElementById("addBook");
