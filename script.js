@@ -31,7 +31,9 @@ function displayBooks(myLibrary){
             const title = document.createElement('h1');
             title.textContent =  book.title;
             const finished = document.createElement('button');
-            finished.textContent = book.finished;
+            finished.addEventListener("click", changeReadStatus)
+            finished.classList.add("bookRead");
+            finished.textContent = isItFinished(book.finished);
             const page = document.createElement('h4');
             page.textContent = "Current Page: " + book.page;
             const totalPage = document.createElement('h4');
@@ -93,5 +95,21 @@ function hideForm(){
     form.style.visibility="hidden";
     form.style.position="absolute";
 }
-
+function changeReadStatus(event){
+    console.log(event.target);
+    if(event.target.innerText == "Finished"){
+        event.target.innerText = "Not read";
+    }
+    else{
+        event.target.innerText = "Finished";
+    }
+}
+function isItFinished(status){
+    if(status == "Finished" || status == "True"){
+        return "Finished";
+    }
+    else{
+        return "Not Read"; 
+    }
+}
 displayBooks(myLibrary);
