@@ -1,6 +1,8 @@
 let myLibrary = [];
 const display = document.getElementById("display");
-const a = Book("hi", "hi", false, false, false, 0, 512);
+const changeView = document.getElementById("makeSmall");
+changeView.addEventListener("click", changeViewSize);
+const a = Book("Carlos Ruiz Zafón", "La Sombra del Viento", false, true, false, 370, 569);
 
 myLibrary.push(a);
 function Book(author, title, finished, inProgress, wantToRead, page, totalPages) {
@@ -115,4 +117,18 @@ function isItFinished(status){
         return "Not Read"; 
     }
 }
+function changeViewSize(){
+    let stylesheet = document.querySelector("[rel='stylesheet']");
+    if (changeView.innerText == "Small Mode"){
+        changeView.innerText = "Large Mode";
+        stylesheet.href ="styles.css";
+    }
+    else {
+        changeView.innerText = "Small Mode";
+        stylesheet.href ="smallmode.css";
+    }
+    displayBooks(myLibrary);
+}
+
+
 displayBooks(myLibrary);

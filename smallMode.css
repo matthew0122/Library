@@ -48,7 +48,7 @@ body {
 .books {
     margin-top: 100px;
     display: grid;
-    grid-template-columns:repeat(auto-fill, min(350px, 49vw));
+    grid-template-columns:repeat(auto-fill, min(100px, 12vw));
     gap:10px;
 }
 #makeSmall {
