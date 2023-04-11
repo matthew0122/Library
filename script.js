@@ -56,17 +56,20 @@ function displayBooks(myLibrary){
     console.log(myLibrary);
 }
 function removeBook(event){
-    for(let book of myLibrary){
-        if("By: " + book.author == event.currentTarget.author.innerText){
-            console.log(book.title);
-            console.log(event.currentTarget.title);
-            if(book.title = event.currentTarget.title){
-                myLibrary.pop(book);
-                break;
+    if(confirm(`Are you sure you want to remove: ${event.currentTarget.title}`))
+    {
+        for(let book of myLibrary){
+            if("By: " + book.author == event.currentTarget.author.innerText){
+                console.log(book.title);
+                console.log(event.currentTarget.title);
+                if(book.title = event.currentTarget.title){
+                    myLibrary.pop(book);
+                    break;
+                }
             }
         }
+        displayBooks(myLibrary);
     }
-    displayBooks(myLibrary);
 }
 function showForm(){
     const form = document.getElementById("addBook");
