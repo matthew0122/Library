@@ -37,6 +37,7 @@ function displayBooks(myLibrary){
             const totalPage = document.createElement('h4');
             totalPage.textContent = "Total Pages: " + book.totalPages;
             const removeButton = document.createElement('button');
+            removeButton.classList.add("remover");
             removeButton.textContent="Remove";
             removeButton.author = author;
             removeButton.title=title.textContent;
