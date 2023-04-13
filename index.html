@@ -16,27 +16,44 @@
         </div>
         <div class="books" id="display">
         </div>
+        <button id="showForm" onclick="showForm()">New Book</button>
         <div id="formHolder">
             <form id="addBook">
-                <label for="title">Title:</label>
-                <input required type="text" id="title" name="title">
-                <label for="author">Author:</label>
-                <input required type="text" id="author" name="author">
-                <label for="finished">Finished:</label>
-                <input type="checkbox" id="finished" name="finished">
-                <label for="inProgress">In Progress:</label>
-                <input type="checkbox" id="inProgress" name="inProgress">
-                <label for="wantTo">Want to read:</label>
-                <input type="checkbox" id="wantTo" name="wantTo">
-                <label for="page">Page:</label>
-                <input type="number" id="page" name="page" min="0">
-                <label for="totalPages">Total Pages:</label>
-                <input type="number" id="totalPages" name="totalPages" min="1">
-                <button type="submit">Submit</button>
-                <button type="reset" onclick="hideForm()">Close</button>
+                <div class="title">
+                    <label for="title">Title:</label>
+                    <input required type="text" id="title" name="title">
+                </div>
+                <div class="author">
+                    <label for="author">Author:</label>
+                    <input required type="text" id="author" name="author">
+                </div>
+                <div class="finished">
+                    <label for="finished">Finished:</label>
+                    <input type="checkbox" id="finished" name="finished">
+                </div>
+                <div class="inProgress">
+                    <label for="inProgress">In Progress:</label>
+                    <input type="checkbox" id="inProgress" name="inProgress">
+                </div>
+                <div class="wantTo">
+                    <label for="wantTo">Want to read:</label>
+                    <input type="checkbox" id="wantTo" name="wantTo">
+                </div>
+                <div class="page">
+                    <label for="page">Page:</label>
+                    <input type="number" id="page" name="page" min="0">
+                </div>
+                <div class="totalPages">
+                    <label for="totalPages">Total Pages:</label>
+                    <input type="number" id="totalPages" name="totalPages" min="1">
+                </div>
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset" onclick="hideForm()">Close</button>
+                </div>
             </form>
         </div>
-        <button onclick="showForm()">New Book</button>
+        
         
 </body>
 </html>
