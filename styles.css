@@ -26,7 +26,7 @@ body {
     align-items: center;
 } 
 .book > h1 {
-    color: #eeeeee;
+    color: #333333;
     text-align: center;
 }
 .book > button {
@@ -62,4 +62,33 @@ body {
 #makeSmall:hover{
     border: 2px solid black;
     transition: border 0.1s;
+}
+#formHolder {
+    width: 250px;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items:center;
+    margin-left: 20px;
+}
+#addBook {
+    color: white;
+}
+#addBook > div {
+    margin: 10px;
+}
+#addBook > div > input{
+    width: 250px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#addBook > div > button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+#showForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
